@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta_charset="UTF-8">
+  <title>3. web sitem</title>
+  <style>
+    body {
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kanki merhaba.</h1>
+  <p>Sana burada ne anlatayım? Sen söyle.</p>
+  <p>İstersen sana bir ne vereyim? Ne versem ki?</p>
+  <p>En iyisi şimdilik ayrılmak.</p>
+  <h4>Görüşürüz!</h4>
+  <p>                                                     Rumuz: Atave</p>
+</body>
+</html>

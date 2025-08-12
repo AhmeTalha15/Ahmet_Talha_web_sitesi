@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Ahmet Talha'nın 2.3 Web Sitesi</title>
+  <style>
+    body {
+      background-color: #f4f4f4;
+    }
+    aside {
+      background-color: #dcdcdc;
+      padding: 15px;
+      width: 250px;
+      float: right;
+      margin-left: 20px;
+      border-radius: 8px;
+    }
+    footer {
+      clear: both;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+      border-top: 1px solid #aaa;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ahmet Talha'nın 2.3 numaralı web sitesine hoş geldiniz!</h1>
+  <p>Selamünaleyküm arkadaşlar. Nasılsınız? Ben iyiyim. Şuan sizinle gerçek bir sohbet yapamam ama,</p>
+  <p>ilerde belki ederiz. Bu arada eğer görürse saydıdeğer Serkan Hoca'ma teşekkürler.</p>
+
+  <h3>Haberlerden biri:</h3>
+  <p>AFAD, 10 Ağustos'ta Balıkesir'in Sındırgı ilçesinde meydana gelen 6.1</p>
+  <p>büyüklüğündeki depremin ardından bölgede 237 artçı sarsıntı</p>
+  <p>kaydedildiğini duyurdu. Açıklamaya göre, bu artçılardan 10'unun</p>
+  <p>büyüklüğü 4.0'ın üzerinde gerçekleşti.</p>
+
+  <button onclick="window.location.href='https://ahmetalha15.github.io/ilkwebsitesi/';">
+    Anasayfa'ya dön
+  </button>
+
+  <aside>
+    <p>Yeni sponsorumuz belli oldu! Mehmet Varıcı artık yeni sponsorumuz. İnstagram ve X hesaplarını inceleyebilirsiniz.</p>
+    <button onclick="window.location.href='https://x.com/mvaricii/';">X</button>
+    <button onclick="window.location.href='https://www.instagram.com/mvaricii/';">İnstagram</button>
+  </aside>
+
+  <footer>
+    <p>Kaynak: Google</p>
+  </footer>
+</body>
+</html>

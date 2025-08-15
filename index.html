@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <title>Ahmet Talha'nın İlk Web Sitesi</title>
+    <style>
+      h1 {
+        color: #228B22;
+      }
+      p {
+        color: black;
+        font-size: 18px;
+        margin: 10px 0;
+      }
+      body {
+        background-color: #FFF8DC;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        margin-left: 270px; /* aside genişliği kadar boşluk */
+      }
+      a {
+        text-decoration: none;
+        background-color: #00008B; /* koyu mavi */
+        color: white;
+        padding: 8px 16px;
+        border-radius: 5px;
+        margin: 5px;
+        display: inline-block;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      a:hover {
+        background-color: #191970;
+        transform: scale(1.05); /* biraz büyütme efekti */
+      }
+      aside {
+        background-color: #dcdcdc;
+        padding: 15px;
+        width: 250px;
+        border-radius: 8px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        text-align: left;
+      }
+
+      aside h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      #saat {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <aside>
+      <div id="saat">00:00:00</div>
+      <h2>Haber</h2>
+      <p>
+        AFAD, 10 Ağustos'ta Balıkesir'in Sındırgı ilçesinde meydana gelen
+        6.1 büyüklüğündeki depremin ardından bölgede 237 artçı sarsıntı
+        kaydedildiğini duyurdu.
+      </p>
+    </aside>
+    <h1>Web Siteme Hoş Geldiniz!</h1>
+    
+    <p>1.web sitemi ziyaret etmek için <a href="deneme2.html">buraya tıklayın!</a></p>
+    <p>2.web sitemi ziyaret etmek için <a href="Kuculen_yazilar.html">buraya tıklayın!</a></p>
+    <p>3.web sitemi ziyaret etmek için <a href="3_web_sitesi.html">buraya tıklayın!</a></p>
+    
+    <p>2. seviye olan 1. sitem de burada <a href="2_seviye_1.html">Haydi gidelim!</a></p>
+    <p>2. seviye olan 2. sitem de burada <a href="2_seviye_2.html">Haydi gidelim!</a></p>
+    <p>2. seviye olan 3. sitem de burada <a href="2_3_website.html">Haydi gidelim!</a></p>
+
+    <script>
+      function saatiGuncelle() {
+        const saatDiv = document.getElementById("saat");
+        const simdi = new Date();
+        const saat = String(simdi.getHours()).padStart(2, '0');
+        const dakika = String(simdi.getMinutes()).padStart(2, '0');
+        const saniye = String(simdi.getSeconds()).padStart(2, '0');
+        saatDiv.textContent = `${saat}:${dakika}:${saniye}`;
+      }
+      setInterval(saatiGuncelle, 1000);
+      saatiGuncelle();
+    </script>
+  </body>
+</html>

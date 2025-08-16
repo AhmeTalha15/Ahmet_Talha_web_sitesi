@@ -13,7 +13,7 @@
       }
       body {
         margin: 0;
-        padding: 0px 250px 0 250px; /* üst = header, sağ-sol = aside genişliği */
+        padding: 0px 350px 0 250px; /* üst = header, sağ-sol = aside genişliği */
         text-align: center;
         font-family: Arial, sans-serif;
         background-color: #FFF8DC;
@@ -35,16 +35,19 @@
      aside {
       background-color: #dcdcdc;
       padding: 15px;
-      width: 250px;
       border-radius: 8px;
-      height: 100vh;
+      min-height: 100vh;
       position: fixed;
       top: 0;
       text-align: left;
       }
 
-      aside.sol { left: 0; }
-      aside.sag { right: 0; }
+      aside.sol { left: 0;
+                  width: 250px;
+      }
+      aside.sag { right: 0;
+                  width: 350px;
+      }
       
       aside h2 {
         font-size: 18px;
@@ -83,7 +86,9 @@
 
     <aside class="sag">
       <h2>Mehmet Varıcı'dan Yazılar</h2>
-      <p>"Yazı"</p>
+      <p>
+        "Yazı"
+      </p>
       <p>16.08.2025 Yazısı</p>
     </aside>
       

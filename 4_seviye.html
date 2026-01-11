@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        /* === ORTA KISIM (ANA İÇERİK) === */
+
+        section {
+            background-color: #ffffff;
+            color: #222222;
+            padding: 24px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            margin-bottom: 16px;
+            color: #1e293b;
+        }
+
+        section p {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        section h3 {
+            margin-top: 20px;
+            margin-bottom: 8px;
+            color: #334155;
+        }
+
+        /* === BUTON === */
+        button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            background-color: #334155;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #1e293b;
+        }
+
+        /* === ESPRİ ALANI === */
+        #espri {
+            background-color: #f4f6f8;
+            border-left: 4px solid #334155;
+            padding: 12px;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+
+        /* === GÖRSEL === */
+        img {
+            margin-top: 12px;
+            border-radius: 8px;
+        }
+      /* === SOL ASIDE === */
+#sol-aside {
+    background-color: #f1f5f9;   /* ana içerikten biraz farklı */
+    color: #1e293b;
+
+    padding: 20px;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+    margin-bottom: 20px;
+}
+      /* === SAYFA DÜZENİ === */
+.sayfa {
+    display: flex;
+    gap: 20px;
+}
+
+/* Sol aside genişliği */
+#sol-aside {
+    width: 220px;
+}
+
+/* Orta içerik */
+main {
+    flex: 1;
+}
+
+
+    </style>
+</head>
+
+<body>
+  <div class="sayfa">
+
+    <aside id="sol-aside">
+        <h3>Bilgi Köşesi</h3>
+        <p>Buraya saat ve haberler eklenecek.</p>
+    </aside>
+    <main>
+    <section>
+        <h2>WEB sitem işte burada</h2>
+    </section>
+
+    <!-- Espri bölümü -->
+    <section>
+        <h3>Burayı denemeye ne dersin?</h3>
+
+        <p id="espri">Henüz espri yok 😄</p>
+
+        <button onclick="espriYap()">Rastgele Espri Yap</button>
+    </section>
+
+    <!-- Sohbet -->
+    <section>
+        <h3>Sohbet Köşesi</h3>
+
+        <p><strong>Yapımcı:</strong> Selam, site nasıl olmuş?</p>
+        <p><strong>Ziyaretçi:</strong> Bence gayet güzel duruyor 😄</p>
+        <p><strong>Yapımcı:</strong> Daha yeni yapıyorum, geliştireceğim.</p>
+        <p><strong>Ziyaretçi:</strong> Devam et, merak ettim!</p>
+        <p><strong>Yapımcı:</strong> Deneye yanıla ilerliyoruz işte.</p>
+        <p><strong>Ziyaretçi:</strong> Peki, ne zamana biter?</p>
+        <p><strong>Yapımcı:</strong> Elimden geldiğince hızlı yapacağım.</p>
+        <p><strong>Ziyaretçi:</strong> Kolay gelsin!</p>
+    </section>
+
+    <!-- Rastgele Görsel -->
+    <section>
+        <h3>Rastgele Görsel</h3>
+
+        <button onclick="gorselGetir()">Görsel Getir</button>
+
+        <br><br>
+
+        <img id="rastgeleGorsel" src="" alt="Rastgele görsel" width="300">
+    </section>
+    </main>
+    <!-- JavaScript -->
+    <script>
+        function espriYap() {
+            const espriler = [
+                "Üzüme üzeme baka baka neden kararır? Çünkü çürür!",
+                "Matematik neden üzgün? Çünkü çok problemi var.",
+                "Oyun hamurlarının kemikleri olmadığını biliyor muydun?",
+                "Bilgisayar neden üşür? Çünkü çok pencere açılır!"
+            ];
+
+            const rastgele = Math.floor(Math.random() * espriler.length);
+            document.getElementById("espri").textContent = espriler[rastgele];
+        }
+
+        function gorselGetir() {
+            const rastgele = Math.floor(Math.random() * 1000);
+            const url = "https://picsum.photos/300/200?random=" + rastgele;
+
+            document.getElementById("rastgeleGorsel").src = url;
+        }
+    </script>
+
+</body>
+</html>

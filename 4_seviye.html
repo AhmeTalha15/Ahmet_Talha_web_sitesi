@@ -90,6 +90,7 @@ main {
 /* === CANLI SAAT === */
 #saat {
     margin-top: 12px;
+    margin-bottom: 12px;
     padding: 10px;
 
     background-color: #ffffff;
@@ -149,7 +150,13 @@ main {
     border-radius: 8px;
     font-size: 14px;
 }
-
+#oy {
+    margin-bottom, margin-top: 5px
+    background-color: #ffffff;
+    color: #1e293b;
+    border-radius: 8px;
+    font-size: 20px;
+}
     </style>
 </head>
 
@@ -162,10 +169,12 @@ main {
             --:--:--
         </div>
         <section>
-        <p>Filistin resmi haber ajansı WAFA'nın haberine göre, İsrail işgal güçlerine ait topçular Gazze kentinin doğusundaki Tuffah ve Zeytun mahallelerini hedef aldı.
-
-İsrail’e ait savaş uçakları, Gazze’nin orta kesiminde yer alan Bureyc Mülteci Kampı’nın doğusundaki birçok bölgeyi bombalarken, güneyde ise Refah kentinin güneybatısındaki alanlara hava saldırıları düzenledi.</p>
-        </section>            
+            <p>Canın mı sıkılıyor, o zaman</p>
+            <div id="oy">
+                <p id="oneriyeri">Butona bas! 👇</p>
+            </div>
+            <button onclick="oneriver()">Öneri öner</button>      
+        </section>
 <section>
   <h2>Hakkımda</h2>
   <p>Adım: Ahmet Talha</p>
@@ -232,7 +241,7 @@ main {
             const espriler = [
                 "Üzüme üzeme baka baka neden kararır? Çünkü çürür!",
                 "Matematik neden üzgün? Çünkü çok problemi var.",
-                "Oyun hamurlarının kemikleri olmadığını biliyor muydun?",
+                "Oyun hamurlarının kemikleri olmadığından yürüyemediklerini bilmiyor muydun?",
                 "Bilgisayar neden üşür? Çünkü çok pencere açılır!"
             ];
 
@@ -264,7 +273,22 @@ main {
 
 saatiGuncelle();
 setInterval(saatiGuncelle, 1000);
+function oneriver() {
+            const oneriler = [
+                "Bir hobi edin.",
+                "Yeni bir şey öğren.",
+                "Dışarı çık.",
+                "Bir arkadaşınla görüş.",
+                "Otur ve düşün.",
+                "Evin içinde 3 tur at.",
+                "HTML öğren.",
+                "Python öğren.",
+                "Zeka küpü çöz."
+            ];
 
+            const rastgele = Math.floor(Math.random() * oneriler.length);
+            document.getElementById("oneriyeri").textContent = oneriler[rastgele];
+        }
     </script>
 
 </body>
